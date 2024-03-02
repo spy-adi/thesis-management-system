@@ -97,4 +97,3 @@ To get started with the development, follow these steps:
 
 
 **PS: This is a new repository created for a more organized structure. The previous repository had both the client and server code pushed into a single repository.**
-```
