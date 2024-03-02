@@ -95,4 +95,6 @@ To get started with the development, follow these steps:
 
 5. **Open your browser and navigate to `http://localhost:3000` to access the application.**
 
+
+**PS: This is a new repository created for a more organized structure. The previous repository had both the client and server code pushed into a single repository.**
 ```
