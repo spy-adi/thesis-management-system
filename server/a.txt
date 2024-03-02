@@ -1,0 +1,218 @@
+// A is the source B is the target
+// The A.hasOne(B) association means that a One-To-One relationship exists between A and B, with the foreign key being defined in the target model (B).
+
+// The A.belongsTo(B) association means that a One-To-One relationship exists between A and B, with the foreign key being defined in the source model (A).
+
+// The A.hasMany(B) association means that a One-To-Many relationship exists between A and B, with the foreign key being defined in the target model (B).
+// db.scholar.hasOne(db.progress_report,{
+//   foreignKey:{
+//     name:"admn",
+//     allowNull:false
+//   }
+// });
+// db.progress_report.belongsTo(db.scholar);
+
+// db.professor.hasMany(db.scholar,{
+//   foreignKey:"supervisor",
+//   targetKey:"name"
+// });
+// db.scholar.belongsTo(db.professor)
+
+// db.professor.hasMany(db.scholar,{
+//   foreignKey:"co_supervisor",
+//   targetKey:"name"
+// });
+// db.scholar.belongsTo(db.professor)
+// db.scholar.belongsTo(db.professor,{
+//   foreignKey:"supervisor",
+//   // targetKey:"name"
+// });
+// db.scholar.belongsTo(db.professor,{
+//   foreignKey:"co_supervisor",
+//   // targetKey:"name"
+// });
+
+// db.ce_rep.hasOne(db.progress_report,{
+//   foreignKey:{allowNull:false}
+// });
+// db.progress_report.belongsTo(db.ce_rep);
+// db.rps_rep.hasOne(db.progress_report,{
+//   foreignKey:{allowNull:false}
+// });
+// db.progress_report.belongsTo(db.rps_rep);
+// db.pss_rep.hasOne(db.progress_report,{
+//   foreignKey:{allowNull:false}
+// });
+// db.progress_report.belongsTo(db.pss_rep,{
+//   foreignKey:{allowNull:false}
+// });
+
+
+// // db.professor.hasMany(db.thesis);
+// // db.thesis.belongsTo(db.professor,{
+// //   foreignKey:{allowNull:false}
+// // });
+
+
+// db.assigned_thesis.hasMany(db.draft);
+// db.draft.belongsTo(db.assigned_thesis,{
+//   foreignKey:{allowNull:false}
+// });
+
+// db.thesis.hasOne(db.assigned_thesis);
+// db.assigned_thesis.belongsTo(db.thesis,{
+//   foreignKey:{allowNull:false}
+// })
+
+// db.thesis_eval.hasOne(db.assigned_thesis);
+// db.assigned_thesis.belongsTo(db.thesis_eval,{
+//   foreignKey:{allowNull:false}
+// })
+
+
+-------------------------------------------------------------------------------------------------
+// db.professor.hasMany(db.scholar, {
+//   foreignKey: 'supervisor'
+// })
+// db.scholar.belongsTo(db.professor, {
+//   foreignKey: 'supervisor',
+//   targetKey: 'name'
+// })
+
+// db.professor.hasMany(db.scholar, {
+//   foreignKey: 'co_supervisor'
+// })
+// db.scholar.belongsTo(db.professor, {
+//   foreignKey: 'co_supervisor',
+//   targetKey: 'name'
+// })
+
+
+// db.scholar.hasOne(db.progress_report,{
+//   foreignKey:"admn"
+// });
+// db.progress_report.belongsTo(db.scholar,{
+//   foreignKey:"admn",
+//   targetKey: 'admn'
+// });
+
+
+// db.dsc.hasMany(db.scholar);
+// db.scholar.belongsTo(db.dsc);
+
+// db.professor.hasOne(db.dsc,{
+//   foreignKey:"chairman"
+// });
+// // db.dsc.belongsTo(db.professor,{
+// //   foreignKey:"chairman",
+// //   targetKey:"name"
+// // })
+
+// db.professor.hasOne(db.dsc,{
+//   foreignKey:"member1"
+// });
+// // db.dsc.belongsTo(db.professor,{
+// //   foreignKey:"member1",
+// //   targetKey:"name"
+// // })
+
+// db.professor.hasOne(db.dsc,{
+//   foreignKey:"member2"
+// });
+// // db.dsc.belongsTo(db.professor,{
+// //   foreignKey:"member2",
+// //   targetKey:"name"
+// // })
+
+// db.professor.hasOne(db.dsc,{
+//   foreignKey:"member3"
+// });
+// // db.dsc.belongsTo(db.professor,{
+// //   foreignKey:"member3",
+// //   targetKey:"name"
+// // })
+
+// db.professor.hasOne(db.dsc,{
+//   foreignKey:"member4"
+// });
+// // db.dsc.belongsTo(db.professor,{
+// //   foreignKey:"member4",
+// //   targetKey:"name"
+// // })
+
+// db.professor.hasOne(db.dsc,{
+//   foreignKey:"member5"
+// });
+// db.dsc.belongsTo(db.professor,{
+//   foreignKey:"member5",
+//   targetKey:"name"
+// })
+
+// db.examiner.hasOne(db.examination_committee,{
+//   foreignKey:"e1"
+// });
+// // db.examination_committee.belongsTo(db.examiner,{
+// //   foreignKey:"e1",
+// //   targetKey:"name"
+// // })
+
+// db.examiner.hasOne(db.examination_committee,{
+//   foreignKey:"e2"
+// });
+// // db.examination_committee.belongsTo(db.examiner,{
+// //   foreignKey:"e2",
+// //   targetKey:"name"
+// // })
+
+// db.examiner.hasOne(db.examination_committee,{
+//   foreignKey:"e3"
+// });
+// db.examination_committee.belongsTo(db.examiner,{
+//   foreignKey:"e3",
+//   targetKey:"name"
+// })
+
+// db.examiner.hasOne(db.examination_committee,{
+//   foreignKey:"e4"
+// });
+// db.examination_committee.belongsTo(db.examiner,{
+//   foreignKey:"e4",
+//   targetKey:"name"
+// })
+
+// db.examiner.hasOne(db.examination_committee,{
+//   foreignKey:"e5"
+// });
+// db.examination_committee.belongsTo(db.examiner,{
+//   foreignKey:"e5",
+//   targetKey:"name"
+// })
+
+// db.examiner.hasOne(db.examination_committee,{
+//   foreignKey:"e6"
+// });
+// db.examination_committee.belongsTo(db.examiner,{
+//   foreignKey:"e6",
+//   targetKey:"name"
+// })
+
+
+// db.examination_committee.hasOne(db.assigned_thesis);
+// db.assigned_thesis.belongsTo(db.examination_committee);
+
+
+// db.professor.hasMany(db.thesis,{
+//   foreignKey:"prof",
+// })
+// db.thesis.belongsTo(db.professor,{
+//   foreignKey:"prof",
+//   targetKey:"name"
+// })
+
+// db.professor.hasMany(db.assigned_thesis,{
+//   foreignKey:"supervisor",
+// })
+// db.assigned_thesis.belongsTo(db.professor,{
+//   foreignKey:"supervisor",
+//   targetKey:"name"
+// })

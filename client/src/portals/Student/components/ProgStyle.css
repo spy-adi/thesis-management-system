@@ -1,0 +1,64 @@
+.container {
+    width: 100%;
+    margin-top: 48px;
+}
+
+.progressBar {
+    counter-reset: step;
+}
+
+.progressBar li {
+    list-style-type: none;
+    float: left;
+    position: relative;
+    text-align: center;
+    color: #666;
+}
+
+.progressBar li::before {
+    content: "\2022";
+    position: relative;
+    counter-increment: step;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    display: block;
+    text-align: center;
+    margin: 0 auto 10px auto;
+    border-radius: 50%;
+    background-color: #666;
+    color: white;
+    font-weight: bold;
+    font-size: large;
+    z-index: 2;
+}
+
+.progressBar li::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    background-color: #ddd;
+    top: 15px;
+    left: -50%;
+    z-index: 1;
+}
+
+.progressBar li:first-child:after {
+    content: none;
+}
+
+.progressBar li.accomplished {
+    color: #0a0;
+}
+
+.progressBar li.accomplished:before {
+    border-color: #0a0;
+    background-color: #0a0;
+    color: white;
+    content: "\2713";
+}
+
+.progressBar li.accomplished + li:after {
+    background-color: #0a0;
+}

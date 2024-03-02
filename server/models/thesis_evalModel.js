@@ -1,0 +1,52 @@
+module.exports = (sequelize,DataTypes)=>{
+    const Thesis_Eval = sequelize.define("thesis_eval",{
+        nameOfScholar:{
+            type:DataTypes.TEXT,
+            allowNull:false
+        },
+        title:{
+            type:DataTypes.TEXT,
+            allowNull:false
+        },
+        openToNewFieldOfResearch:{
+            type:DataTypes.ENUM,
+            values:["yes","no"],
+            allowNull:false
+        },
+        giveNewInterpretationToFactsAlreadyKnown:{
+            type:DataTypes.ENUM,
+            values:["yes","no"],
+            allowNull:false
+        },
+        advanceOnResultsOfPreviousInvestigations:{
+            type:DataTypes.ENUM,
+            values:["yes","no"],
+            allowNull:false
+        },
+        carriedOutIndependentlyByScholar:{
+            type:DataTypes.ENUM,
+            values:["yes","no"],
+            allowNull:false
+        },
+        generalFeaturesOne:{
+            type:DataTypes.TEXT
+        },
+        generalFeaturesTwo:{
+            type:DataTypes.TEXT
+        },
+        aboutPresentation:{
+            type:DataTypes.TEXT
+        },
+        eval_type:{
+            type:DataTypes.ENUM,
+            values:["i","ii","iii","iv","v"],
+            allowNull:false
+        },
+        eval_type_url:{
+            type:DataTypes.TEXT,
+            allowNull:false
+        }
+
+    });
+    return Thesis_Eval;
+}
