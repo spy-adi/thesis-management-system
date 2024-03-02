@@ -1,4 +1,3 @@
-```markdown
 # Thesis Management System
 
 Thesis Management System is a web application built with React.js, Node.js, and MySQL, using Sequelize as the ORM. It provides a platform to streamline the entire PhD student life-cycle, specifically focusing on thesis submission and evaluation processes.
@@ -51,7 +50,6 @@ thesis-management-system
 ├── .gitignore
 ├── package.json
 └── README.md
-```
 
 - **client**: Contains the frontend code written in React.js.
 - **server**: Contains the backend code written in Node.js.
