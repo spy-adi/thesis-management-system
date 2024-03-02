@@ -50,7 +50,7 @@ thesis-management-system
 ├── .gitignore
 ├── package.json
 └── README.md
-
+```
 - **client**: Contains the frontend code written in React.js.
 - **server**: Contains the backend code written in Node.js.
   - **config**: Configuration files.
